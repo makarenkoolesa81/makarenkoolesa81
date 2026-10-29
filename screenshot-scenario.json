@@ -1,0 +1,47 @@
+{
+  "notes": "tapFrac is computed from each element's real RectTransform, not estimated. The canvas scaler is Expand on a 1242x2688 reference, which resolves to 1242x2760 on a 1080x2400 device, and the panels are letterboxed 36 units top and bottom, so for a point at (x, y) in panel-centre coordinates: fracX = (621 + x) / 1242 and fracY = (1380 - y) / 2760. PLAY sits at anchor (0.5, 0.345) of the menu panel, i.e. y = -416.6 -> 0.651. The HUD pause button is anchored to the panel's top-right at (-120, -120), i.e. (501, 1224) -> (0.903, 0.057). The pause pop's close cross is CLOSE_BASE_BUTTON inside TOP_BTNS/RIGHT of BASE_POP, which works out at (443.2, 120.1) -> (0.857, 0.456); it is the one control on that pop that both hides it and resumes the run, so the frame after it is live gameplay again. Hop taps land in the play band (y from top 0.13 .. 0.90), where the left third, middle third and right third of the screen choose the landing column.",
+  "steps": [
+    {
+      "waitLoader": true,
+      "wait": 3,
+      "shot": "01_Menu"
+    },
+    {
+      "tapFrac": [0.500, 0.651],
+      "label": "PLAY",
+      "waitLoader": true,
+      "wait": 4,
+      "shot": "02_Game_start"
+    },
+    {
+      "tapFrac": [0.500, 0.620],
+      "label": "HOP_CENTRE",
+      "wait": 1.6,
+      "shot": "03_Game_hop_centre"
+    },
+    {
+      "tapFrac": [0.200, 0.620],
+      "label": "HOP_LEFT",
+      "wait": 1.6,
+      "shot": "04_Game_hop_left"
+    },
+    {
+      "tapFrac": [0.800, 0.620],
+      "label": "HOP_RIGHT",
+      "wait": 1.8,
+      "shot": "05_Game_hop_right"
+    },
+    {
+      "tapFrac": [0.903, 0.057],
+      "label": "PAUSE",
+      "wait": 2.0,
+      "shot": "06_Pause_pop"
+    },
+    {
+      "tapFrac": [0.857, 0.456],
+      "label": "PAUSE_CLOSE",
+      "wait": 2.0,
+      "shot": "07_Game_resumed"
+    }
+  ]
+}

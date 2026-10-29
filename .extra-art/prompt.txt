@@ -1,0 +1,40 @@
+You are an asset generator for a mobile game. Generate all images described below and save them as PNG files in the CURRENT DIRECTORY.
+
+RULES:
+1. Use your NATIVE IMAGE GENERATION TOOL to generate each image - do NOT draw with Python/PIL, use the real AI image generation tool.
+2. After generating each image, copy it from the generated_images path to the current directory with the correct filename.
+3. Use these EXACT filenames, one image each, 18 in total: icon_back.png, icon_close.png, sprite_bar_fill.png, sprite_button.png, sprite_cart.png, sprite_chevron.png, sprite_crate.png, sprite_dust.png, sprite_emblem.png, sprite_feather.png, sprite_grain.png, sprite_haybale.png, sprite_heart.png, sprite_hen.png, sprite_lane_road.png, sprite_lane_verge.png, sprite_signpost.png, sprite_truck.png. The app code already references exactly these names.
+4. Do NOT resize images - save them at the native resolution. Resizing is done externally.
+5. TRANSPARENT BACKGROUNDS: every image MUST have a transparent background (PNG with alpha channel): one isolated object, nothing behind it.
+6. NO TEXT, NO LETTERS, NO NUMBERS, NO WORDS in any image.
+7. Draw the facing / direction EXACTLY as stated - the game does not rotate or mirror these images.
+8. Do NOT create a zip archive. Do NOT overwrite _style_reference.png.
+9. When completely done, print exactly: CODEX_ASSETS_DONE
+
+STYLE: every image in the same style as _style_reference.png in this folder (the game's existing art): same rendering, palette, outline and lighting.
+
+ASSET SPECIFICATION:
+- icon_back.png: a thick rounded chevron pointing left
+- icon_close.png: a thick rounded X cross, single colour
+- sprite_bar_fill.png: a plain rounded horizontal bar segment, flat fill, empty centre
+- sprite_button.png: a plain rounded-rectangle button plate, slightly thicker edge, flat fill, empty centre
+- sprite_cart.png: a small wooden produce cart on two large wheels
+- sprite_chevron.png: a single rounded chevron pointing up, flat bright green
+- sprite_crate.png: a closed wooden crate with a rope handle
+- sprite_dust.png: sprite dust
+- sprite_emblem.png: an abstract mark: three stacked chevrons rising to the right inside a soft-cornered hexagon, one feather arc crossing it — no letters of any kind
+- sprite_feather.png: a single bright cream feather with a thick outline
+- sprite_grain.png: a small sack of golden grain, tied at the neck
+- sprite_haybale.png: a round golden hay bale on a low trolley
+- sprite_heart.png: a plump rounded heart, thick outline
+- sprite_hen.png: a plump cream-and-orange hen mid-stride, crisp silhouette, one subject centred and fully in frame
+- sprite_lane_road.png: a horizontal dark asphalt band with a dashed light centre line, tileable left and right, flat ends
+- sprite_lane_verge.png: a horizontal strip of short green grass with a few darker tufts, tileable left and right
+- sprite_signpost.png: a wooden roadside signpost with a blank plate (no letters, no text)
+- sprite_truck.png: a stubby orange delivery truck with a high boxy cargo bed
+
+GAME (from the brief):
+Название игры - "Feather Track (Chicken Feather Road)"
+Основные цвета и тематика - бренд (гембловый) - "chicken road age 12"
+Основная механика - "short touch-friendly sessions with clear progression and daily challenges"
+780х1666 - png - бекграунд игры, края не должны быть закруглённые (НЕПРОЗРАЧНЫЙ фон, полноцветная заливка)
